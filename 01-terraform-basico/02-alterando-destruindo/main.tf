@@ -1,5 +1,7 @@
+# Criando Bucket S3
+
 terraform {
-  required_version = "1.0.9"
+  required_version = "1.1.9"
 
   required_providers {
     aws = {
@@ -8,20 +10,25 @@ terraform {
     }
   }
 }
-
 provider "aws" {
   region = "us-east-1"
 }
 
 resource "aws_s3_bucket" "my-test-bucket" {
-  bucket = "my-tf-test-bucket-mjr1212"
+  bucket = "my-tf-test-bucket-04071998"
   acl    = "private"
 
   tags = {
-    Name        = "My bucket"
+    Name        = "Meu bucket"
     Environment = "Dev"
     Managedby   = "Terraform"
-    Owner       = "Marcos"
-    UpdateAt    = "26/10/2021"
+    Owner       = "Marcos Jr"
+    UpdatedAt   = "23-05-2022"
   }
 }
+
+
+
+
+
+# Para destuir os recursos, utilizar terraform destroy
